@@ -1,3 +1,50 @@
 body{
-    background-color: rgb(255, 140, 0);
-}
+    background-image: url('../pic/רקע.png');
+    background-size: cover; 
+    /* background-position: center;  */
+    background-repeat: no-repeat;
+    overflow-x: auto; 
+    /* גלילה אוטומטית ברוחב */
+    white-space: nowrap;
+     /* אי הפסקת שורות */
+    
+ }
+  /* body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+  } */
+/*
+  .circle {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    animation: moveCircle 5s infinite alternate;
+  }
+
+  @keyframes moveCircle {
+    0% {
+      transform: translateY(100vh) rotate(0deg);
+    }
+    100% {
+      transform: translateY(-100vh) rotate(720deg);
+    }
+  }
+
+
+
+
+   */
+   /* .circle {
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    border-radius: 50%;
+    position: absolute;
+} */
