@@ -4,30 +4,8 @@ let componentsa = document.getElementById('components')
 {/* <div class="icon__home"></div> */ }
 
 function f_load() {
-    debugger
-    // צור את העיגולים
-    // let numCircles = 30;
-    // let radius = 100;
-    // let centerX = 200;
-    // let centerY = 200;
-    // let angleIncrement = (2 * Math.PI) / numCircles;
-
-    // for (let i = 0; i < numCircles; i++) {
-    //     const angle = i * angleIncrement;
-    //     const x = centerX + radius * Math.cos(angle);
-    //     const y = centerY + radius * Math.sin(angle);
-    //     let circle = document.createElement("div");
-    //     circle.setAttribute("class", "icon__home")
-    //     circle.setAttribute("id", `step-${i}`)
-    //     circle.style.left = x + 'px';
-    //     circle.style.top = y + 'px';
-    //     // area.appendChild(circle)
-    //     document.body.appendChild(circle);
-    //      document.getElementById(`step-${i}`).appendChild(document.createElement("p").setAttribute("value", i))
-
-    // }
-    let wedding = 20
-    let numCircles = 30;
+    let wedding = 20//02/06!!
+    let numCircles = 80;
     let radius = 100;
     let centerX = 200;
     let centerY = 200;
@@ -38,12 +16,16 @@ function f_load() {
         if (numCircles - i == wedding-dayOfMonth) {
             let wave = document.createElement('div')
             wave.setAttribute('class', 'circle')
-            let circle__btn = document.createElement('span')
+            let circle__btn = document.createElement('button')
             let circle__back1 = document.createElement('span')
             let circle__back2 = document.createElement('span')
             circle__btn.setAttribute('class', 'circle__btn')
             circle__back1.setAttribute('class', 'circle__back-1')
             circle__back2.setAttribute('class', 'circle__back-2')
+            circle__back2.setAttribute('value', '23')
+            circle__back1.setAttribute('value', '23')
+            // circle__btn.setAttribute('textcontent', '23')
+            circle__btn.addEventListener('click', action);
             wave.appendChild(circle__btn)
             wave.appendChild(circle__back1)
             wave.appendChild(circle__back2)
@@ -69,35 +51,8 @@ function f_load() {
             }
         }
     }
-    //     <div class="circle">
-    //     <span class="circle__btn"></span>
-    //     <span class="circle__back-1"></span>
-    //     <span class="circle__back-2"></span>
-    // </div>
-
-    // let cover = document.createElement("input")
-    // cover.setAttribute("type", "button")
-    // cover.setAttribute("id", i)
-    // cover.setAttribute("class", "char")
-    // cover.setAttribute("value", "_")
-    // sec.appendChild(cover)
 }
-// sec.appendChild(document.createElement("br"))
-// let arrabc = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-// let index = 0
-// for (let i = 0; i < 3; i++) {
-//     for (let j = 0; j < 8; j++) {
-//         let b = document.createElement("input")
-//         b.setAttribute("id", index)
-//         b.setAttribute("class", "mayBtn")
-//         b.setAttribute("type", "button")
-//         b.setAttribute("data_i", i)
-//         b.setAttribute("data_j", j)
-//         b.setAttribute("value", arrabc[index++])
-//         b.setAttribute("title", "לחץ עלי")
-//         b.addEventListener("click", function () { f_click(realWord); });
-//         sec.appendChild(b)
-//     }
-//     sec.appendChild(document.createElement("br"))
-// }
-// }
+
+function action(){
+
+}

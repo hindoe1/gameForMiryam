@@ -1,164 +1,92 @@
-@function gray($color) {
-    @return rgb($color, $color, $color);
-  }
-  
-  body {
-    background-color: gray(30);
-    margin: 0px;
-    overflow: hidden;
-    padding: 0px;
-  
-    input,
-    h1,
-    a,
-    span {
-      color: gray(90);
-      font-family: "Rubik", sans-serif;
-      font-weight: 400;
-      margin: 0px;
-      padding: 0px;
-    }
-  }
-  
-  #app {
-    align-items: center;
+html {
+    /* font-size: 62.5%;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+	line-height: 1rem;
+	letter-spacing: 0.08rem; */
+}
+
+body {
+    /* display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	font-size: 1.4rem;
+	font-weight: inherit;
+	background-color: #ffffff;
+	height: 100vh;
+	width: 100vw; */
+}
+
+.container {
+    position: relative;
     display: flex;
-    height: 100vh;
+    flex-direction: row;
     justify-content: center;
-    width: 100vw;
-  
-    #timer {
-      background: linear-gradient(
-        to bottom right,
-        rgba(2, 99, 225, 1),
-        rgba(235, 24, 54, 1)
-      );
-      border-radius: 22px;
-  
-      #timer-text {
-        align-items: center;
-        background-color: gray(30);
-        border-radius: 20px;
-        display: flex;
-        margin: 4px;
-        padding: 0px 20px;
-  
-        .timer-char {
-          height: 150px;
-          position: relative;
-          text-align: center;
-          width: 80px;
-  
-          &.colon {
-            color: white;
-            font-size: 8em;
-            line-height: 150px;
-          }
-  
-          .timer-char-slider {
-            display: flex;
-            flex-direction: column;
-            left: 0px;
-            position: absolute;
-            top: 0px;
-            transition: top 200ms;
-            width: 80px;
-  
-            .timer-char-slider-option {
-              color: white;
-              font-size: 4em;
-              height: 150px;
-              line-height: 150px;
-              opacity: 0.05;
-              transition: opacity 400ms, font-size 400ms;
-              width: 80px;
-  
-              &.active {
-                font-size: 8em;
-                opacity: 1;
-              }
-            }
-          }
-        }
-      }
+    align-items: center;
+    height: 170px;
+    width: 650px;
+    /* background-color: transparent; */
+    border-radius: 3px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white); */
+    margin-left: 50px;
+}
+
+.clock-column {
+    margin-right: 7rem;
+    text-align: center;
+    position: relative;
+
+    &::after {
+        content: ":";
+        display: block;
+        height: 0.25rem;
+        width: 0.25rem;
+        font-size: 36px;
+        font-weight: 200;
+        color: #5b0eeb;
+        position: absolute;
+        top: 60px;
+        right: -35px;
     }
-  }
-  
-  @media (max-width: 800px) {
-    #app {
-      #timer {
-        border-radius: 16px;
-  
-        #timer-text {
-          border-radius: 14px;
-          margin: 4px;
-          padding: 0px 12px;
-  
-          .timer-char {
-            height: 80px;
-            width: 40px;
-  
-            &.colon {
-              font-size: 4em;
-              line-height: 80px;
-            }
-  
-            .timer-char-slider {
-              width: 40px;
-  
-              .timer-char-slider-option {
-                font-size: 2em;
-                height: 80px;
-                line-height: 80px;
-                width: 40px;
-  
-                &.active {
-                  font-size: 4em;
-                }
-              }
-            }
-          }
+
+    &:last-child {
+        &::after {
+            display: none;
         }
-      }
     }
-  }
-  
-  @media (max-width: 400px) {
-    #app {
-      #timer {
-        border-radius: 8px;
-  
-        #timer-text {
-          border-radius: 6px;
-          margin: 2px;
-          padding: 0px 10px;
-  
-          .timer-char {
-            height: 40px;
-            width: 20px;
-  
-            &.colon {
-              font-size: 2em;
-              line-height: 40px;
-            }
-  
-            .timer-char-slider {
-              width: 20px;
-  
-              .timer-char-slider-option {
-                font-size: 1.25em;
-                height: 40px;
-                line-height: 40px;
-                width: 20px;
-  
-                &.active {
-                  font-size: 2em;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  
+}
+
+.clock-column:last-child {
+    margin-right: 0;
+}
+
+.clock-label {
+    padding-top: 10px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    border-top: 1px solid #5b0eeb;
+}
+
+.clock-timer {
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 1;
+}
+
+.clock-input {
+    clear: both;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto 10px;
+}
+
+.done {
+    color: #5b0eeb;
+    font-weight: 600;
+}

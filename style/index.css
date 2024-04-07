@@ -1,15 +1,50 @@
-body{
+body {
     background-image: url('../pic/רקע.png');
-    background-size: cover; 
+    background-image: url('../pic/רקע\ גיפ.gif');
+    /* overflow-y: hidden; */
+    /* background-image: url("https://imgur.com/a/2vEz4VP"); */
+
+    /* background-image: url("https://drive.google.com/uc?export=view&id=1FsWI-mp5HNN7WMAFZ5UQdccHRAgx197H"); */
+    /* background-image: url("https://drive.google.com/file/d/1FsWI-mp5HNN7WMAFZ5UQdccHRAgx197H/view?usp=drive_link");
+    background-image: url("https://drive.google.com/file/d/1FsWI-mp5HNN7WMAFZ5UQdccHRAgx197H/view?usp=sharing");         */
+    background-size: cover;
     /* background-position: center;  */
     background-repeat: no-repeat;
-    overflow-x: auto; 
+    overflow-x: auto;
     /* גלילה אוטומטית ברוחב */
     white-space: nowrap;
-     /* אי הפסקת שורות */
-    
- }
-  /* body {
+    /* אי הפסקת שורות */
+    background-attachment: fixed;
+    /* קבע את תמונת הרקע כבוחרת */
+    background-size: cover;
+    /* מתאים את גודל תמונת הרקע לגודל החלון */
+    /* background-position: center; */
+    /* ממוקם את תמונת הרקע במרכז */
+    overflow-y: scroll;
+    /* אפשר את הגלילה רק בציר האנכי */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.element {
+    background-image: url("https://drive.google.com/uc?export=view&id=file/d/1FsWI-mp5HNN7WMAFZ5UQdccHRAgx197H/view?usp=drive_link");
+    /* שים לב שתחליף את YOUR_IMAGE_ID במזהה הייחודי של התמונה ב-Google Drive שלך */
+    background-size: cover;
+    /* התאמה אוטומטית של התמונה לגודל הרקע */
+    background-position: center;
+    /* מיקום התמונה במרכז האלמנט */
+}
+
+.wraper {
+    display: flex;
+    position: fixed;
+    top: -100px;
+    left: 50px;
+    /* justify-content: center; */
+  align-items: center;
+}
+
+/* body {
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -41,7 +76,7 @@ body{
 
 
    */
-   /* .circle {
+/* .circle {
     width: 30px;
     height: 30px;
     background-color: blue;

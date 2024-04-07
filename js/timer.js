@@ -1,57 +1,58 @@
-"use strict";
-const TimerChar = (props) => {
-    const ref = React.useRef(null);
-    const colon = props.char === ":";
-    if (colon) {
-        return React.createElement("h1", { className: "timer-char colon" }, ":");
-    }
-    const number = parseInt(props.char);
-    const getCharSlider = () => {
-        let options = [];
-        for (let i = 0; i <= 9; i++) {
-            const classes = classNames("timer-char-slider-option", {
-                active: number === i
-            });
-            options.push(React.createElement("span", { key: i, className: classes }, i));
-        }
-        const height = ref.current ? ref.current.offsetHeight : 0, top = `${number * height * -1}px`;
-        return (React.createElement("div", { className: "timer-char-slider", style: { top } }, options));
-    };
-    return (React.createElement("div", { ref: ref, className: "timer-char number" }, getCharSlider()));
+// load event listeners
+loadEventListeners();
+
+document.addEventListener('DOMContentLoaded', function() {
+    var initialDate = '2024-06-02';
+    calcTime(initialDate);
+});
+function loadEventListeners() {
+	document.addEventListener('DOMContentLoaded', function() { calcTime(); });
 };
-const Timer = () => {
-    const [date, setDateTo] = React.useState(new Date());
-    React.useEffect(() => {
-        const interval = setInterval(() => {
-            const update = new Date();
-            if (update.getSeconds() !== date.getSeconds()) {
-                setDateTo(update);
-            }
-        }, 100);
-        return () => {
-            clearInterval(interval);
-        };
-    }, [date]);
-    const formatSegment = (segment) => {
-        return segment < 10 ? `0${segment}` : segment;
-    };
-    const getHours = (hours) => {
-        return hours % 12 === 0 ? 12 : hours % 12;
-    };
-    const getTime = () => {
-        const hours = getHours(date.getHours()), minutes = date.getMinutes(), seconds = date.getSeconds();
-        return `${formatSegment(hours)}:${formatSegment(minutes)}:${formatSegment(seconds)}`;
-    };
-    const getChars = () => {
-        return getTime()
-            .split("")
-            .map((char, index) => (React.createElement(TimerChar, { key: index, char: char })));
-    };
-    return (React.createElement("div", { id: "timer" },
-        React.createElement("div", { id: "timer-text" }, getChars())));
-};
-const App = () => {
-    return (React.createElement("div", { id: "app" },
-        React.createElement(Timer, null)));
-};
-ReactDOM.render(React.createElement(App, null), document.getElementById("root"));
+
+var timeTo = document.getElementById('time-to').value,
+		date,
+		now = new Date(),
+		newYear = new Date('7.4.2024').getTime(),
+		startTimer = '';
+
+// calculate date, hour, minute and second
+function calcTime(dates) {
+	//ui variables
+	clearInterval(startTimer);
+
+	if(typeof(dates) == 'undefined'){
+		date = new Date(newYear).getTime();
+	}else {
+		date = new Date(dates).getTime();
+	}
+
+	function updateTimer(date){
+
+		var now = new Date().getTime();
+		var distance = date - now;
+
+		// Time calculations for days, hours, minutes and seconds
+		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+		// select element
+		document.querySelector('.clock-day').innerHTML = days;
+		document.querySelector('.clock-hours').innerHTML = hours;
+		document.querySelector('.clock-minutes').innerHTML = minutes;
+		document.querySelector('.clock-seconds').innerHTML = seconds;
+
+		if(now >= date){
+			clearInterval(startTimer);
+			document.querySelector('.clock-day').innerHTML = 'D';
+			document.querySelector('.clock-hours').innerHTML = 'O';
+			document.querySelector('.clock-minutes').innerHTML = 'N';
+			document.querySelector('.clock-seconds').innerHTML = 'E';
+		}
+	}
+
+	startTimer = setInterval(function() { updateTimer(date); }, 1000);
+
+}
+
