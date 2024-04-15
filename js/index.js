@@ -1,19 +1,16 @@
 document.body.onload = f_load()
 let area = document.getElementsByName('icon')
 let componentsa = document.getElementById('components')
-{/* <div class="icon__home"></div> */ }
 
 function f_load() {
+    let wd = new Date('07/02/2024')
+    let tdd = new Date()
+    let def = wd.getTime() - tdd.getTime()
+    var days = Math.ceil(def / (1000 * 60 * 60 * 24));
     let wedding = 20//02/06!!
     let numCircles = 80;
-    let radius = 100;
-    let centerX = 200;
-    let centerY = 200;
-    let angleIncrement = (2 * Math.PI) / numCircles;
-    var currentDate = new Date();
-    var dayOfMonth = currentDate.getDate();
-    for (let i = 0; i < numCircles; i++) {
-        if (numCircles - i == wedding-dayOfMonth) {
+    for (let i = numCircles; i > 0; i--) {
+        if (i == days) {
             let wave = document.createElement('div')
             wave.setAttribute('class', 'circle')
             let circle__btn = document.createElement('button')
@@ -22,9 +19,9 @@ function f_load() {
             circle__btn.setAttribute('class', 'circle__btn')
             circle__back1.setAttribute('class', 'circle__back-1')
             circle__back2.setAttribute('class', 'circle__back-2')
-            circle__back2.setAttribute('value', '23')
-            circle__back1.setAttribute('value', '23')
-            // circle__btn.setAttribute('textcontent', '23')
+            // circle__btn.setAttribute('title', 'היום זה לא לחיץ😉');
+            // circle__back1.setAttribute('title', 'היום זה לא לחיץ😉')
+            // circle__back2.setAttribute('title', 'היום זה לא לחיץ😉')
             circle__btn.addEventListener('click', action);
             wave.appendChild(circle__btn)
             wave.appendChild(circle__back1)
@@ -32,27 +29,48 @@ function f_load() {
             document.getElementById('Gsteps').appendChild(wave)
         }
         else {
-            // const angle = i * angleIncrement;
-            // const x = centerX + radius * Math.cos(angle);
-            // const y = centerY + radius * Math.sin(angle);
             let circle = document.createElement("div");
             circle.setAttribute("class", "icon__home")
             circle.setAttribute("id", `step-${i}`)
-            // circle.style.left = x + 'px';
-            // circle.style.top = y + 'px';
             document.getElementById('Gsteps').appendChild(circle);
-
-            // צור אלמנט p בתוך כל עיגול והוסף לו את הערך של i
             let paragraph = document.createElement("p");
-            paragraph.textContent = numCircles - i;
+            if (i == 2)
+                paragraph.textContent = '!!!!';
+            else if (i == 1)
+                paragraph.textContent = '👰🏼';
+            else
+                paragraph.textContent = i;
+            paragraph.setAttribute('title', 'היום זה לא לחיץ😉');
             document.getElementById(`step-${i}`).appendChild(paragraph);
-            if (i / 5 == 0) {
-                document.getElementById('Gsteps').appendChild(document.createElement("br"))
-            }
         }
     }
+    // let tdayc = document.createElement('section')
+    // let tdaycdiv = document.createElement('div')
+    // let tdaycspan = document.createElement('span')
+    // tdayc.setAttribute('class', 'neon-block')
+    // tdaycdiv.setAttribute('class', 'block')
+    // tdaycspan.setAttribute('class', 'rainbow')
+    // tdaycspan.textContent = '0'
+    // tdaycdiv.appendChild(tdaycspan)
+    // tdayc.appendChild(tdaycdiv)
+    // document.getElementById('Gsteps').appendChild(tdayc);
+
+    // let a=document.createElement('div')
+    // let b=document.createElement('div')
+    // document.getElementById('Gsteps').appendChild(a);
+    // document.getElementById('Gsteps').appendChild(b);
 }
 
-function action(){
+function action() {
+// הוסיפי את מחלקת האנימציה לדף
+document.body.classList.add('fade-out');
 
+// קבעי מאזין לאירוע לסיום האנימציה
+document.body.addEventListener('animationend', function() {
+    // לאחר סיום האנימציה, בצעי מעבר לדף הבא
+    window.location.assign('file:///C:/Users/This%20User/Desktop/calagame/html/enter.html');
+});
+
+    // window.location.assign('file:///C:/Users/This%20User/Desktop/calagame/html/enter.html');
+    // window.location.href = '../html/enter.html';
 }

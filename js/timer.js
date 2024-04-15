@@ -2,7 +2,7 @@
 loadEventListeners();
 
 document.addEventListener('DOMContentLoaded', function() {
-    var initialDate = '2024-06-02';
+    var initialDate = '2024-07-02';
     calcTime(initialDate);
 });
 function loadEventListeners() {
@@ -32,10 +32,10 @@ function calcTime(dates) {
 		var distance = date - now;
 
 		// Time calculations for days, hours, minutes and seconds
-		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+		var days = Math.ceil(distance / (1000 * 60 * 60 * 24));
+		var hours = Math.ceil((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minutes = Math.ceil((distance % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.ceil((distance % (1000 * 60)) / 1000);
 
 		// select element
 		document.querySelector('.clock-day').innerHTML = days;

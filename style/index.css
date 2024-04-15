@@ -44,42 +44,16 @@ body {
   align-items: center;
 }
 
-/* body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    overflow: hidden;
-  } */
-/*
-  .circle {
-    width: 30px;
-    height: 30px;
-    background-color: red;
-    border-radius: 50%;
-    position: absolute;
-    animation: moveCircle 5s infinite alternate;
+/* דהייה החוצה */
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
   }
-
-  @keyframes moveCircle {
-    0% {
-      transform: translateY(100vh) rotate(0deg);
-    }
-    100% {
-      transform: translateY(-100vh) rotate(720deg);
-    }
+  to {
+      opacity: 0;
   }
-
-
-
-
-   */
-/* .circle {
-    width: 30px;
-    height: 30px;
-    background-color: blue;
-    border-radius: 50%;
-    position: absolute;
-} */
+}

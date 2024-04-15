@@ -161,8 +161,8 @@
 .circle__btn {
   grid-row: 1/2;
   grid-column: 1/2;
-  width: 6rem;
-  height: 6rem;
+  width: 100px;
+  height: 100px;
   display: flex;
   margin: 0.6rem;
   justify-content: center;
@@ -292,8 +292,8 @@
 .icon__account, .icon__home, .icon__settings {
   /* width: 4rem;
   height: 4rem; */
-  width: 80px;
-  height: 40px;
+  width: 100px;
+  height: 50px;
   border-radius: 50%;
   box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
   display: flex;
@@ -343,3 +343,72 @@
     opacity: 0;
   }
 }
+
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+.neon-block {
+    .block {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        height: 150px;
+        background: linear-gradient(45deg, #c4bdc100 40%, #02010400);
+        color: #fff;
+        font-size: 30px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-family: monospace;
+        border-radius: 50%;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            bottom: -2px;
+            left: -2px;
+            z-index: -1;
+            background: linear-gradient(45deg, #ff00f2, #fbff00);
+            animation: neon-block 1.5s linear infinite;
+            border-radius: 50%;
+        }
+
+        .rainbow {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            bottom: -4px;
+            left: -4px;
+            filter: blur(15px);
+            z-index: -2;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: linear-gradient(315deg, #ff00f7, #b700ff);
+                border-radius: 50%;
+
+            }
+
+            &:after {
+                animation: neon-block 1.5s linear infinite;
+            }
+        }
+    }
+}
+
+@keyframes neon-block {
+    from {
+        filter: hue-rotate(0deg);
+    }
+
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
