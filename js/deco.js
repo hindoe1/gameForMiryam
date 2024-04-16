@@ -56,17 +56,13 @@ dragElement = (target, btn) => {
       btn.x = x - 10;
       btn.style.left = btn.x + 'px';
 
-      // get the position of the button inside the container (%)
       let percentPosition = (btn.x + 10) / targetRect.width * 100;
       
-      // color width = position of button (%)
       color.style.width = percentPosition + "%";
 
-      // move the tooltip when button moves, and show the tooltip
       tooltip.style.left = btn.x - 5 + 'px';
       tooltip.style.opacity = 1;
 
-      // show the percentage in the tooltip
       tooltip.textContent = Math.round(percentPosition) + '%';
   };
 

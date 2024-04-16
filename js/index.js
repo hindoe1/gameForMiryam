@@ -7,7 +7,6 @@ function f_load() {
     let tdd = new Date()
     let def = wd.getTime() - tdd.getTime()
     var days = Math.ceil(def / (1000 * 60 * 60 * 24));
-    let wedding = 20//02/06!!
     let numCircles = 80;
     for (let i = numCircles; i > 0; i--) {
         if (i == days) {
@@ -19,9 +18,6 @@ function f_load() {
             circle__btn.setAttribute('class', 'circle__btn')
             circle__back1.setAttribute('class', 'circle__back-1')
             circle__back2.setAttribute('class', 'circle__back-2')
-            // circle__btn.setAttribute('title', 'היום זה לא לחיץ😉');
-            // circle__back1.setAttribute('title', 'היום זה לא לחיץ😉')
-            // circle__back2.setAttribute('title', 'היום זה לא לחיץ😉')
             circle__btn.addEventListener('click', action);
             wave.appendChild(circle__btn)
             wave.appendChild(circle__back1)
@@ -62,15 +58,10 @@ function f_load() {
 }
 
 function action() {
-// הוסיפי את מחלקת האנימציה לדף
-document.body.classList.add('fade-out');
+    document.body.classList.add('fade-out');
+    document.body.addEventListener('animationend', function () {
+        // window.location.assign('file:///C:/Users/This%20User/Desktop/calagame/html/enter.html');
+        window.location.href = './html/enter.html';
 
-// קבעי מאזין לאירוע לסיום האנימציה
-document.body.addEventListener('animationend', function() {
-    // לאחר סיום האנימציה, בצעי מעבר לדף הבא
-    window.location.assign('file:///C:/Users/This%20User/Desktop/calagame/html/enter.html');
-});
-
-    // window.location.assign('file:///C:/Users/This%20User/Desktop/calagame/html/enter.html');
-    // window.location.href = '../html/enter.html';
+    });
 }

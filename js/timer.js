@@ -1,4 +1,3 @@
-// load event listeners
 loadEventListeners();
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -15,9 +14,7 @@ var timeTo = document.getElementById('time-to').value,
 		newYear = new Date('7.4.2024').getTime(),
 		startTimer = '';
 
-// calculate date, hour, minute and second
 function calcTime(dates) {
-	//ui variables
 	clearInterval(startTimer);
 
 	if(typeof(dates) == 'undefined'){
@@ -31,13 +28,11 @@ function calcTime(dates) {
 		var now = new Date().getTime();
 		var distance = date - now;
 
-		// Time calculations for days, hours, minutes and seconds
 		var days = Math.ceil(distance / (1000 * 60 * 60 * 24));
 		var hours = Math.ceil((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 		var minutes = Math.ceil((distance % (1000 * 60 * 60)) / (1000 * 60));
 		var seconds = Math.ceil((distance % (1000 * 60)) / 1000);
 
-		// select element
 		document.querySelector('.clock-day').innerHTML = days;
 		document.querySelector('.clock-hours').innerHTML = hours;
 		document.querySelector('.clock-minutes').innerHTML = minutes;
