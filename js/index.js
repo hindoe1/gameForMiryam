@@ -6,7 +6,7 @@ function f_load() {
     let tdd = new Date()
     let def = wd.getTime() - tdd.getTime()
     var days = Math.ceil(def / (1000 * 60 * 60 * 24));
-    let numCircles = 61;
+    let numCircles = 60;
     for (let i = numCircles; i > 0; i--) {
         if (i == days) {
             let wave = document.createElement('div')
@@ -42,9 +42,9 @@ function f_load() {
 }
 
 function action() {
-   
+
     // process.env.SENDGRID_API_KEY
-    // sendEmail()
+    sendEmail()
     document.body.classList.add('fade-out');
     document.body.addEventListener('animationend', function () {
         // window.location.assign('file:///C:/Users/This%20User/Desktop/calagame/html/enter.html');
@@ -52,42 +52,30 @@ function action() {
 
     });
 }
-// function sendEmail() {
-//     const apiKey = 'pubkey-cab64469d8959d5dabe820662645f2c7';
-//     const domain = 'YOUR_MAILGUN_DOMAIN';
-   
-//     const emailData = {
-//         from: 'hindoe.ap@gmail.com',
-//         to: 'ayala.amt@gmail.com',
-//         subject: 'Subject of the Email',
-//         text: 'Body of the Email'
-//     };
+function sendEmail() {
+        const to ='hindoe.ap@gmail.com'
+        const subject = '🎉🎉הייי היא פתחהההה';
+        const message = '⚔️⚔️יאלללה למשימה'
 
-//     const url = `https://api.mailgun.net/v3/${domain}/messages`;
-
-//     fetch(url, {
-//         method: 'POST',
-//         headers: {
-//             'Authorization': `Basic ${btoa(`api:${apiKey}`)}`,
-//             'Content-Type': 'application/x-www-form-urlencoded'
-//         },
-//         body: new URLSearchParams(emailData).toString()
-//     })
-//         .then(response => {
-//             if (!response.ok) {
-//                 throw new Error('Network response was not ok');
-//             }
-//             return response.json();
-//         })
-//         .then(data => {
-//             console.log('Mailgun response:', data);
-//             alert('Email sent successfully!');
-//         })
-//         .catch(error => {
-//             console.error('There was a problem with the fetch operation:', error);
-//             alert('Failed to send email. Please try again later.');
-//         });
-// 
-
-
+        // Configure SMTPJS
+        Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "hindoe.ap@gmail.com",
+            Password: "A2F0542F74DEAE3AC3C0739D323F1BBCD390",
+            // סיסמא של אימות דו משלבי rasu cubt wqqk ztfv
+            To: to,
+            From: "hindoe.ap@gmail.com",
+            Subject: subject,
+            Body: message
+        }).then(function(response) {
+            // alert('Email sent successfully!');
+            console.log("response:",response);
+        }).catch(function(error) {
+            console.error('Error:', error);
+            // alert('Failed to send email. Please try again later.');
+        });
+    }
+// סיסמא אימות דו משלבי - vjhr qquf sztt hymj
 // pubkey-cab64469d8959d5dabe820662645f2c7
+// קוד API של
+// 4FC7510606E71900E55C3C80D5AF1B0499B84DE91ADD15976AA460D75437CD795EE06B24ACE4B7F04412EEFC6559D400
