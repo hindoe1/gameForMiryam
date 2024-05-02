@@ -1,13 +1,12 @@
 document.body.onload = f_load()
 let area = document.getElementsByName('icon')
 let componentsa = document.getElementById('components')
-
 function f_load() {
     let wd = new Date('07/02/2024')
     let tdd = new Date()
     let def = wd.getTime() - tdd.getTime()
     var days = Math.ceil(def / (1000 * 60 * 60 * 24));
-    let numCircles = 80;
+    let numCircles = 61;
     for (let i = numCircles; i > 0; i--) {
         if (i == days) {
             let wave = document.createElement('div')
@@ -40,24 +39,12 @@ function f_load() {
             document.getElementById(`step-${i}`).appendChild(paragraph);
         }
     }
-    // let tdayc = document.createElement('section')
-    // let tdaycdiv = document.createElement('div')
-    // let tdaycspan = document.createElement('span')
-    // tdayc.setAttribute('class', 'neon-block')
-    // tdaycdiv.setAttribute('class', 'block')
-    // tdaycspan.setAttribute('class', 'rainbow')
-    // tdaycspan.textContent = '0'
-    // tdaycdiv.appendChild(tdaycspan)
-    // tdayc.appendChild(tdaycdiv)
-    // document.getElementById('Gsteps').appendChild(tdayc);
-
-    // let a=document.createElement('div')
-    // let b=document.createElement('div')
-    // document.getElementById('Gsteps').appendChild(a);
-    // document.getElementById('Gsteps').appendChild(b);
 }
 
 function action() {
+   
+    // process.env.SENDGRID_API_KEY
+    // sendEmail()
     document.body.classList.add('fade-out');
     document.body.addEventListener('animationend', function () {
         // window.location.assign('file:///C:/Users/This%20User/Desktop/calagame/html/enter.html');
@@ -65,3 +52,42 @@ function action() {
 
     });
 }
+// function sendEmail() {
+//     const apiKey = 'pubkey-cab64469d8959d5dabe820662645f2c7';
+//     const domain = 'YOUR_MAILGUN_DOMAIN';
+   
+//     const emailData = {
+//         from: 'hindoe.ap@gmail.com',
+//         to: 'ayala.amt@gmail.com',
+//         subject: 'Subject of the Email',
+//         text: 'Body of the Email'
+//     };
+
+//     const url = `https://api.mailgun.net/v3/${domain}/messages`;
+
+//     fetch(url, {
+//         method: 'POST',
+//         headers: {
+//             'Authorization': `Basic ${btoa(`api:${apiKey}`)}`,
+//             'Content-Type': 'application/x-www-form-urlencoded'
+//         },
+//         body: new URLSearchParams(emailData).toString()
+//     })
+//         .then(response => {
+//             if (!response.ok) {
+//                 throw new Error('Network response was not ok');
+//             }
+//             return response.json();
+//         })
+//         .then(data => {
+//             console.log('Mailgun response:', data);
+//             alert('Email sent successfully!');
+//         })
+//         .catch(error => {
+//             console.error('There was a problem with the fetch operation:', error);
+//             alert('Failed to send email. Please try again later.');
+//         });
+// 
+
+
+// pubkey-cab64469d8959d5dabe820662645f2c7

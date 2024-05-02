@@ -46,8 +46,6 @@ function calcTime(dates) {
 			document.querySelector('.clock-seconds').innerHTML = 'E';
 		}
 	}
-
 	startTimer = setInterval(function() { updateTimer(date); }, 1000);
-
 }
 

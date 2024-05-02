@@ -210,8 +210,12 @@ window.onload = function () {
 		if (step === 3) {
 		}
 		if (step === 4) {
-			var audio = new Audio('../music/Chickens.mp3');
-			audio.play(); 
+			let day = new Date().getDate();
+			let month = new Date().getMonth() + 1;
+			let date = `${day}-${month}`;
+
+			var audio = new Audio(`../music/${date}.mp3`);
+			audio.play();
 			reveal();
 			return;
 		}
@@ -235,22 +239,13 @@ function reveal() {
 	else {
 		w = 255; h = 155;
 	}
-
+	let day = new Date().getDate();
+	let month = new Date().getMonth() + 1;
+	let date = `${day}-${month}`;
 	var video = document.createElement("video");
-
-	video.src = "../videos/משחק למרים הסרטה.mp4";
+	video.src = `../videos/${date}.mp4`;
 	video.loop = true;
 	video.autoplay = true;
 	video.controls = false;
 	document.querySelector('#video').appendChild(video);
-
-	//   var ifrm = document.createElement("iframe");
-	//         ifrm.setAttribute("src", "../videos/משחק למרים הסרטה.mp4");
-	// 		ifrm.setAttribute("loop", "true");
-
-	//         ifrm.style.border = 'none';
-	//         document.querySelector('#video').appendChild(ifrm);
-	// ifrm.style.width = `${w}px`;
-	// ifrm.style.height = `${h}px`;
-
 }
