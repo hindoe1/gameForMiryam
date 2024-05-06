@@ -191,6 +191,17 @@ function loop() {
 }
 
 window.onload = function () {
+	setTimeout(function() {
+		Swal.fire({
+			title: "A greeting ",
+			text: "from someone nice!",
+			imageUrl: "../pic/6-5.png",
+			imageWidth: 400,
+			imageHeight: 600,
+			imageAlt: "Custom image"
+		});
+	}, 7000); 
+
 	var merrywrap = document.getElementById("merrywrap");
 	var box = merrywrap.getElementsByClassName("giftbox")[0];
 	var step = 1;

@@ -1,5 +1,5 @@
 /* Kaushan+Script, oregano, sail */
-@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+/* @import url("https://fonts.googleapis.com/css?family=Kaushan+Script"); */
 
 html,
 body,
@@ -46,7 +46,8 @@ canvas#canvas {
 }
 
 div#beach {
-  background-image: url(https://dl.dropbox.com/s/oe0oce2udq44bj5/beachsil2.png);
+  /* background-image: url(https://dl.dropbox.com/s/oe0oce2udq44bj5/beachsil2.png); */
+  background-image: url('../pic/beachsil2.png');
   background-size: cover;
   background-position: bottom right;
   background-size: 1700px;
