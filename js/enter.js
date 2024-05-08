@@ -194,7 +194,7 @@ window.onload = function () {
 	setTimeout(function () {
 		Swal.fire({
 			title: "A greeting ",
-			html: '<a href="https://drive.google.com/file/d/1udeu0GHFoYP-qqREhKaMUyVzAUBvCRpY/view?usp=share">?קדימה! מי מחכה שם</a>',
+			html: '<a href="https://drive.google.com/file/d/1udeu0GHFoYP-qqREhKaMUyVzAUBvCRpY/view?usp=gmail">?קדימה! מי מחכה שם</a>',
 			imageUrl: "../pic/לוגו כוכב.png",
 			imageWidth: 350,
 			imageHeight: 350,
