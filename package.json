@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "^0.1.4"
+    "build": "index"
   },
   "dependencies": {
     "build": "^0.1.4",
