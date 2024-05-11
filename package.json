@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "build": "^0.1.4"
+  },
   "dependencies": {
     "build": "^0.1.4",
     "npm": "^10.7.0",
