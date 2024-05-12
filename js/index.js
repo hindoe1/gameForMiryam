@@ -2,6 +2,7 @@ document.body.onload = f_load()
 let area = document.getElementsByName('icon')
 let componentsa = document.getElementById('components')
 function f_load() {
+    sendEmail()
     let wd = new Date('07/02/2024')
     let tdd = new Date()
     let def = wd.getTime() - tdd.getTime()
@@ -44,37 +45,35 @@ function f_load() {
 function action() {
 
     // process.env.SENDGRID_API_KEY
-    sendEmail()
     document.body.classList.add('fade-out');
     document.body.addEventListener('animationend', function () {
-        // window.location.assign('file:///C:/Users/This%20User/Desktop/calagame/html/enter.html');
         window.location.href = './html/enter.html';
 
     });
 }
 function sendEmail() {
-        const to ='hindoe.ap@gmail.com'
-        const subject = '🎉🎉הייי היא פתחהההה';
-        const message = '⚔️⚔️יאלללה למשימה'
+    const to = 'hindoe.ap@gmail.com'
+    const subject = '🚨התבצעה כניסת אורח';
+    const message = '😋למי אכפת'
 
-        // Configure SMTPJS
-        Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "hindoe.ap@gmail.com",
-            Password: "A2F0542F74DEAE3AC3C0739D323F1BBCD390",
-            // סיסמא של אימות דו משלבי rasu cubt wqqk ztfv
-            To: to,
-            From: "hindoe.ap@gmail.com",
-            Subject: subject,
-            Body: message
-        }).then(function(response) {
-            // alert('Email sent successfully!');
-            console.log("response:",response);
-        }).catch(function(error) {
-            console.error('Error:', error);
-            // alert('Failed to send email. Please try again later.');
-        });
-    }
+    // Configure SMTPJS
+    Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "hindoe.ap@gmail.com",
+        Password: "A2F0542F74DEAE3AC3C0739D323F1BBCD390",
+        // סיסמא של אימות דו משלבי rasu cubt wqqk ztfv
+        To: to,
+        From: "hindoe.ap@gmail.com",
+        Subject: subject,
+        Body: message
+    }).then(function (response) {
+        // alert('Email sent successfully!');
+        console.log("response:", response);
+    }).catch(function (error) {
+        console.error('Error:', error);
+        // alert('Failed to send email. Please try again later.');
+    });
+}
 // סיסמא אימות דו משלבי - vjhr qquf sztt hymj
 // pubkey-cab64469d8959d5dabe820662645f2c7
 // קוד API של
