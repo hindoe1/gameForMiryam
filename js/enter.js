@@ -193,10 +193,10 @@ function loop() {
 window.onload = function () {
 	setTimeout(function () {
 		Swal.fire({
-			title: "נכון שחיים מאושרים בלי מחשבים ",
+			title: "חוויה מתקנת למשוב על הפרויקט",
 			// html: '<a href="https://drive.google.com/file/d/1udeu0GHFoYP-qqREhKaMUyVzAUBvCRpY/view?usp=gmail">?קדימה! מי מחכה שם</a>',
-			text: "אבל בכל אופן",
-			imageUrl: "../pic/מכתב מבי אנד אם.png",
+			text: "👆",
+			imageUrl: "../pic/12-5.JPG",
 			imageWidth: 350,
 			imageHeight: 350,
 			imageAlt: "Custom image"
