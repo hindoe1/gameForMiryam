@@ -191,17 +191,17 @@ function loop() {
 }
 
 window.onload = function () {
-	setTimeout(function () {
-		Swal.fire({
-			title: "יום חדש חוויה חדשה",
-			html: '<a href="https://savtec.org/img/images/what-is-a-400-bad-request-error-and-how-can-i-fix-it.png">?קדימה! מי מחכה שם</a>',
-			// text: "אבל בכל אופן",
-			imageUrl: "../pic/לוגו כוכב.png",
-			imageWidth: 350,
-			imageHeight: 350,
-			imageAlt: "Custom image"
-		});
-	}, 7000);
+	// setTimeout(function () {
+	// 	Swal.fire({
+	// 		title: "יום חדש חוויה חדשה",
+	// 		html: '<a href="https://savtec.org/img/images/what-is-a-400-bad-request-error-and-how-can-i-fix-it.png">?קדימה! מי מחכה שם</a>',
+	// 		// text: "אבל בכל אופן",
+	// 		imageUrl: "../pic/לוגו כוכב.png",
+	// 		imageWidth: 350,
+	// 		imageHeight: 350,
+	// 		imageAlt: "Custom image"
+	// 	});
+	// }, 7000);
 
 	var merrywrap = document.getElementById("merrywrap");
 	var box = merrywrap.getElementsByClassName("giftbox")[0];
@@ -255,9 +255,9 @@ function reveal() {
 	let month = new Date().getMonth() + 1;
 	let date = `${day}-${month}`;
 	var video = document.createElement("video");
-	// video.src = `../videos/${date}.mp4`;
+	video.src = `../videos/${date}.mp4`;
 	video.loop = true;
 	video.autoplay = true;
-	video.controls = false;
+	video.controls = true;
 	document.querySelector('#video').appendChild(video);
 }

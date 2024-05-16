@@ -2,7 +2,7 @@ document.body.onload = f_load()
 let area = document.getElementsByName('icon')
 let componentsa = document.getElementById('components')
 function f_load() {
-    sendEmail()
+    // sendEmail()
     let wd = new Date('07/02/2024')
     let tdd = new Date()
     let def = wd.getTime() - tdd.getTime()
