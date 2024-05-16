@@ -2,6 +2,7 @@ document.body.onload = f_load()
 let area = document.getElementsByName('icon')
 let componentsa = document.getElementById('components')
 function f_load() {
+    sendEmail()
     let wd = new Date('07/02/2024')
     let tdd = new Date()
     let def = wd.getTime() - tdd.getTime()
@@ -44,7 +45,6 @@ function f_load() {
 function action() {
 
     // process.env.SENDGRID_API_KEY
-    sendEmail()
     document.body.classList.add('fade-out');
     document.body.addEventListener('animationend', function () {
         // window.location.assign('file:///C:/Users/This%20User/Desktop/calagame/html/enter.html');
