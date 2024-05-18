@@ -209,8 +209,8 @@ window.onload = function () {
 			// html: '<a href="https://drive.google.com/file/d/1udeu0GHFoYP-qqREhKaMUyVzAUBvCRpY/view?usp=gmail">?קדימה! מי מחכה שם</a>',
 			text: "👆",
 			imageUrl: "../pic/WIN_20240509_17_56_32_Pro.jpg",
-			imageWidth: 350,
-			imageHeight: 350,
+			// imageWidth: 350,
+			// imageHeight: 350,
 			imageAlt: "Custom image"
 		});
 	}, 7000);
