@@ -11,7 +11,7 @@ body {
   flex-direction: column;
   background-image: linear-gradient(to right, #3533CD, #FF228C);
   overflow: hidden;
-  font-family: "Coda", cursive;
+  /* font-family: "Coda", cursive; */
 }
 
 .deck {
@@ -31,7 +31,7 @@ body {
   display: inline-block;
   margin: 0 15px 15px 0;
   line-height: 140px;
-  font-size: 0;
+  /* font-size: 0; */
   color: #ffffff;
   text-align: center;
   border-radius: 8px;
@@ -40,7 +40,7 @@ body {
   transform: rotateY(180deg);
   transform-style: preserve-3d;
   transition: transform 0.3s ease;
-  font-family: FontAwesome;
+  /* font-family: FontAwesome; */
   line-height: 75px;
 }
 .deck .card:nth-child(4n) {
@@ -58,13 +58,13 @@ body {
   cursor: default;
 }
 .deck .card.show {
-  font-size: 33px;
+  font-size: 25px;
 }
 .deck .card.match {
   transform: rotateY(0);
   cursor: default;
   background: #FF228C;
-  font-size: 33px;
+  font-size: 25px;
 }
 .deck .card.notmatch {
   background: #00eeff;

@@ -1,58 +1,76 @@
+// var symbols = [
+//     { "bicycle": "חדר"},
+//     { "bicycle": "6"},
+//     { "leaf": "ayala" },
+//     { "leaf": "hinda" },
+//     { "cube": "big"},
+//     { "cube": "G"},
+//     { "anchor": "" },
+//     { "anchor": "" },
+//     { "paper-plane-o": "בבילון"},
+//     { "paper-plane-o": "פארק"},
+//     { "bolt": "מה" },
+//     { "bolt": "הבעיה" },
+//     { "bomb": "אי אפשר"},
+//     { "bomb": "גם וגם"},
+//     { "diamond": "גלעד" },
+//     { "diamond": "מרים" }
+// ];
 var symbols = [
-    { "bicycle": "חדר"},
-    { "bicycle": "6"},
-    { "leaf": "ayala" },
-    { "leaf": "hinda" },
-    { "cube": "rg"},
-    { "cube": "vr"},
-    { "anchor": "d" },
-    { "anchor": "d" },
-    { "paper-plane-o": "בבילון"},
-    { "paper-plane-o": "פארק"},
-    { "bolt": "מה" },
-    { "bolt": "הבעיה" },
-    { "bomb": "rg"},
-    { "bomb": "vr"},
-    { "diamond": "d" },
-    { "diamond": "d" }
+    { "rrr": "חדר"},
+    { "rrr": "6"},
+    { "www": "ayala" },
+    { "www": "hinda" },
+    { "ppp": "big"},
+    { "ppp": "G"},
+    { "anhor": "אלגו" },
+    { "anhor": "ריתמיקה" },
+    { "pper-plane-o": "בבילון"},
+    { "pper-plane-o": "פארק"},
+    { "blt": "מה" },
+    { "blt": "הבעיה" },
+    { "omb": "אי אפשר"},
+    { "omb": "גם וגם"},
+    { "iamond": "גלעד" },
+    { "iamond": "מרים" }
 ];
 // חתן כלה מברשת וצבע בית ומפתח
-var symbol = [
-    "bicycle",
-    "bicycle",
-    "leaf",
-    "leaf",
-    "cube",
-    "cube",
-    "anchor",
-    "anchor",
-    "paper-plane-o",
-    "paper-plane-o",
-    "bolt",
-    "bolt",
-    "bomb",
-    "bomb",
-    "diamond",
-    "diamond"
-];
-var a = [
-    "חדר",
-    "6",
-    "c",
-    "c",
-    "b",
-    "b",
-    "n",
-    "n",
-    "m",
-    "m",
-    "h",
-    "h",
-    "r",
-    "r",
-    "y",
-    "y"
-];
+// var symbol = [
+//     "bicycle",
+//     "bicycle",
+//     "leaf",
+//     "leaf",
+//     "cube",
+//     "cube",
+//     "anchor",
+//     "anchor",
+//     "paper-plane-o",
+//     "paper-plane-o",
+//     "bolt",
+//     "bolt",
+//     "bomb",
+//     "bomb",
+//     "diamond",
+//     "diamond"
+// ];
+// var a = [
+//     "חדר",
+//     "6",
+//     "c",
+//     "c",
+//     "b",
+//     "b",
+//     "n",
+//     "n",
+//     "m",
+//     "m",
+//     "h",
+//     "h",
+//     "r",
+//     "r",
+//     "y",
+//     "y"
+// ];
 var opened = [];
 var match = 0;
 var moves = 0;
@@ -96,6 +114,7 @@ function initGame() {
         var li = document.createElement("li");
         li.className = "card";
         li.innerHTML = `<i class="fa fa-${Object.keys(card)[0]}">${Object.values(symbols[index])[0]}</i>`; 
+        // li.innerHTML = `<div>${Object.values(symbols[index])[0]}</i>`; 
         
 
         deck.appendChild(li);
