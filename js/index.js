@@ -2,11 +2,7 @@ document.body.onload = f_load()
 let area = document.getElementsByName('icon')
 let componentsa = document.getElementById('components')
 function f_load() {
-<<<<<<< HEAD
     sendEmail()
-=======
-    // sendEmail()
->>>>>>> 7bbb7ac851df89094089387c910aa3395c9bbad6
     let wd = new Date('07/02/2024')
     let tdd = new Date()
     let def = wd.getTime() - tdd.getTime()
@@ -51,12 +47,8 @@ function action() {
     // process.env.SENDGRID_API_KEY
     document.body.classList.add('fade-out');
     document.body.addEventListener('animationend', function () {
-<<<<<<< HEAD
         // window.location.assign('file:///C:/Users/This%20User/Desktop/calagame/html/enter.html');
         window.location.href = './html/memoryGame.html';
-=======
-        window.location.href = './html/enter.html';
->>>>>>> 7bbb7ac851df89094089387c910aa3395c9bbad6
 
     });
 }
