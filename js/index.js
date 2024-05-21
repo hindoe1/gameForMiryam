@@ -48,7 +48,7 @@ function action() {
     document.body.classList.add('fade-out');
     document.body.addEventListener('animationend', function () {
         // window.location.assign('file:///C:/Users/This%20User/Desktop/calagame/html/enter.html');
-        window.location.href = './html/memoryGame.html';
+        window.location.href = './html/enter.html';
 
     });
 }

@@ -193,49 +193,27 @@ function loop() {
 window.onload = function () {
 	// setTimeout(function () {
 	// 	Swal.fire({
-<<<<<<< HEAD
 	// 		title: "חוויה מתקנת למשוב על הפרויקט",
 	// 		// html: '<a href="https://drive.google.com/file/d/1udeu0GHFoYP-qqREhKaMUyVzAUBvCRpY/view?usp=gmail">?קדימה! מי מחכה שם</a>',
 	// 		text: "👆",
 	// 		imageUrl: "../pic/12-5.JPG",
-=======
-	// 		title: "יום חדש חוויה חדשה",
-	// 		html: '<a href="https://savtec.org/img/images/what-is-a-400-bad-request-error-and-how-can-i-fix-it.png">?קדימה! מי מחכה שם</a>',
-	// 		// text: "אבל בכל אופן",
-	// 		imageUrl: "../pic/לוגו כוכב.png",
->>>>>>> 7bbb7ac851df89094089387c910aa3395c9bbad6
 	// 		imageWidth: 350,
 	// 		imageHeight: 350,
 	// 		imageAlt: "Custom image"
 	// 	});
 	// }, 7000);
-<<<<<<< HEAD
-=======
 
-	setTimeout(function () {
-		Swal.fire({
-			title: "❣️",
-			// html: '<a href="https://drive.google.com/file/d/1udeu0GHFoYP-qqREhKaMUyVzAUBvCRpY/view?usp=gmail">?קדימה! מי מחכה שם</a>',
-			text: "👆",
-			imageUrl: "../pic/WIN_20240509_17_56_32_Pro.jpg",
-			// imageWidth: 350,
-			// imageHeight: 350,
-			imageAlt: "Custom image"
-		});
-	}, 7000);
->>>>>>> 7bbb7ac851df89094089387c910aa3395c9bbad6
-
-	setTimeout(function () {
-		Swal.fire({
-			title: "❣️",
-			// html: '<a href="https://drive.google.com/file/d/1udeu0GHFoYP-qqREhKaMUyVzAUBvCRpY/view?usp=gmail">?קדימה! מי מחכה שם</a>',
-			text: "👆",
-			imageUrl: "../pic/WIN_20240509_17_56_32_Pro.jpg",
-			// imageWidth: 350,
-			// imageHeight: 350,
-			imageAlt: "Custom image"
-		});
-	}, 7000);
+	// setTimeout(function () {
+	// 	Swal.fire({
+	// 		title: "❣️",
+	// 		// html: '<a href="https://drive.google.com/file/d/1udeu0GHFoYP-qqREhKaMUyVzAUBvCRpY/view?usp=gmail">?קדימה! מי מחכה שם</a>',
+	// 		text: "👆",
+	// 		imageUrl: "../pic/WIN_20240509_17_56_32_Pro.jpg",
+	// 		// imageWidth: 350,
+	// 		// imageHeight: 350,
+	// 		imageAlt: "Custom image"
+	// 	});
+	// }, 7000);
 
 
 	var merrywrap = document.getElementById("merrywrap");
@@ -289,7 +267,7 @@ function reveal() {
 	let day = new Date().getDate();
 	let month = new Date().getMonth() + 1;
 	let date = `${day}-${month}`;
-	var video = document.createElement("video");
+	// var video = document.createElement("video");
 	// video.src = `../videos/${date}.mp4`;
 	video.loop = true;
 	video.autoplay = true;
