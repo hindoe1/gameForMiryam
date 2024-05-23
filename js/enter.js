@@ -208,7 +208,7 @@ window.onload = function () {
 			title: "❣️",
 			// html: '<a href="https://drive.google.com/file/d/1udeu0GHFoYP-qqREhKaMUyVzAUBvCRpY/view?usp=gmail">?קדימה! מי מחכה שם</a>',
 			text: "👆",
-			imageUrl: "../pic/מונק.jpg",
+			imageUrl: "../pic/kh.png",
 			// imageWidth: 350,
 			// imageHeight: 350,
 			imageAlt: "Custom image"
