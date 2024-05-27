@@ -267,7 +267,7 @@ function reveal() {
 	let day = new Date().getDate();
 	let month = new Date().getMonth() + 1;
 	let date = `${day}-${month}`;
-	var video = document.createElement("video");
+	// var video = document.createElement("video");
 	// video.src = `../videos/${date}.mp4`;
 	video.loop = true;
 	video.autoplay = true;
