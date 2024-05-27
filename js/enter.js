@@ -203,17 +203,17 @@ window.onload = function () {
 	// 	});
 	// }, 7000);
 
-	// setTimeout(function () {
-	// 	Swal.fire({
-	// 		title: "❣️",
-	// 		// html: '<a href="https://drive.google.com/file/d/1udeu0GHFoYP-qqREhKaMUyVzAUBvCRpY/view?usp=gmail">?קדימה! מי מחכה שם</a>',
-	// 		text: "👆",
-	// 		imageUrl: "../pic/WIN_20240509_17_56_32_Pro.jpg",
-	// 		// imageWidth: 350,
-	// 		// imageHeight: 350,
-	// 		imageAlt: "Custom image"
-	// 	});
-	// }, 7000);
+	setTimeout(function () {
+		Swal.fire({
+			title: "❣️",
+			// html: '<a href="https://drive.google.com/file/d/1udeu0GHFoYP-qqREhKaMUyVzAUBvCRpY/view?usp=gmail">?קדימה! מי מחכה שם</a>',
+			text: "👆",
+			imageUrl: "../pic/28-5.png",
+			imageWidth: 350,
+			imageHeight: 450,
+			imageAlt: "Custom image"
+		});
+	}, 7000);
 
 
 	var merrywrap = document.getElementById("merrywrap");
