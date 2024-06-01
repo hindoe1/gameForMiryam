@@ -207,8 +207,8 @@ window.onload = function () {
 		Swal.fire({
 			title: "❣️",
 			// html: '<a href="https://drive.google.com/file/d/1udeu0GHFoYP-qqREhKaMUyVzAUBvCRpY/view?usp=gmail">?קדימה! מי מחכה שם</a>',
-			text: "👆",
-			imageUrl: "../pic/kh.png",
+			text: "!!!",
+			imageUrl: "../pic/חמות.jpg",
 			// imageWidth: 350,
 			// imageHeight: 350,
 			imageAlt: "Custom image"
