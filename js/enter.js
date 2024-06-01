@@ -210,7 +210,7 @@ window.onload = function () {
 			text: "!!!",
 			imageUrl: "../pic/חמות.jpg",
 			imageWidth: 350,
-			imageHeight: 350,
+			imageHeight: 450,
 			imageAlt: "Custom image"
 		});
 	}, 7000);
